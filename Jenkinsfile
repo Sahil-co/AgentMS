@@ -8,15 +8,10 @@ pipeline{
        
               stage ('Compile Stage'){
                        steps{
-                              bat 'mvn clean compile'
+                              bat 'mvn clean install'
                        }
               }
 
-              stage ('Testing Stage'){
-                       steps{
-                              bat 'mvn test'
-                       }
-              }
        
               stage ('Sonarqube deployment Stage'){
                        steps{
